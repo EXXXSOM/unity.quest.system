@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2bef93e5ef89f4d9e189ef40e03f6a, type: 3}
+  m_Name: StoryPartStart
+  m_EditorClassIdentifier: 
+  _status: 0
+  _locationType: 1
+  _nameStoryPart: Part 1 "Test"
+  _icon: {fileID: 0}
+  _description: Description test.
+  _storyPartAwards:
+  - {fileID: 11400000, guid: ad2a57a987513234daa5d841f01fe55c, type: 2}
+  - {fileID: 11400000, guid: 5de8474a132b79b489438f14d42f0e8d, type: 2}
