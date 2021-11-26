@@ -1,20 +1,22 @@
 {
   "name": "com.exsom.questsystem",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Quest System",
   "description": "Quest system for Unity.",
   "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
+    "unity",
+    "quest",
+    "award"
   ],
   "author": {
-    "name": "Unity",
-    "email": "unity@example.com",
-    "url": "https://www.unity3d.com"
+    "name": "EXSOM",
+    "email": "exsom.developer@gmail.com",
+    "url": "https://www.exsomstudio.com"
   },
   "dependencies": {
+    "com.exsom.savesystem": "https://github.com/EXXXSOM/unity.save.system.git",
     "com.unity.textmeshpro": ""
   },
-  "type": "module"
+  "type": "library",
+  "hideInEditor": false
 }

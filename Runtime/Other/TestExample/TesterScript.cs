@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using EXSOM.SaveSyste;
 
 [DefaultExecutionOrder(-10200)]
 public class TesterScript : MonoBehaviour
@@ -18,7 +19,9 @@ public class TesterScript : MonoBehaviour
             SaveSystem.LoadData();
         }
 
-        QuestSystem.Boodstrap(SaveSystem.SaveData.AllQuestData);
+        AllQuestData allQuestData = null;
+        SaveSystem.GetData("QuestSystem", out allQuestData);
+        QuestSystem.Boodstrap(allQuestData);
     }
 
     private void Start()

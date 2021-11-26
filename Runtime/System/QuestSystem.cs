@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using EXSOM.SaveSyste;
 
-public class QuestSystem
+public class QuestSystem : ISavable
 {
     public const int START_CAPACITY_DATA = 10;
     public const int START_ACTIVE_QUEST = 5;
@@ -33,6 +34,7 @@ public class QuestSystem
     private QuestSystem(AllQuestData data)
     {
         Debug.Log(data);
+        RegisterInSaveSystem();
         if (data == null)
         {
             CreateEmptyData();
@@ -237,5 +239,20 @@ public class QuestSystem
             Dictionary<int, QuestData> _storyPartData = new Dictionary<int, QuestData>(START_CAPACITY_DATA);
             return new AllQuestData(_storyPartData, activeQuestActionsData);
         }
+    }
+
+    public void RegisterInSaveSystem()
+    {
+        SaveSystem.RegisterSavable(this);
+    }
+
+    public void UnregisterInSaveSystem()
+    {
+        SaveSystem.UnregisterSavable(this);
+    }
+
+    public void Save(SaveDataBase saveDataBase)
+    {
+        saveDataBase.Storage.Add("QuestSystem", GetSaveDataAllQuests());
     }
 }
